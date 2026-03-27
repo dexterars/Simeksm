@@ -941,26 +941,30 @@ footer{
 
 <!-- ── CONTACT ─────────────────────────────────────── -->
 <section id="contact">
-  <div class="cnt-layout">
-    <div class="mech-reveal">
-      <div class="s-tag">Свържете се с нас</div>
-      <h2 class="s-h2" style="margin-bottom:1.2rem">Изпратете <span class="blue">запитване</span></h2>
-      <div class="cnt-info">
-        <p>Разкажете ни за вашия проект. Нашият инженерен екип ще анализира изискванията и ще ви изпрати детайлна оферта в рамките на 48 часа.</p>
-      </div>
-      <div class="cnt-detail">
-        <div class="cnt-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.29a2 2 0 0 1 1.95-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.89A16 16 0 0 0 15 15.91l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17z"/></svg></div>
-        <div class="cnt-txt">+359 82 123 456</div>
-      </div>
-      <div class="cnt-detail">
-        <div class="cnt-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div class="cnt-txt">info@inzhenerpro.bg</div>
-      </div>
-      <div class="cnt-detail">
-        <div class="cnt-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div class="cnt-txt">Русе, Индустриална зона, бул. Трети Март 45</div>
-      </div>
+<form action="https://formspree.io/f/xknnzpwa" method="POST" id="contact-form" class="cnt-form">
+    <input type="hidden" name="_replyto" value="lapanici@gmail.com">
+    <input type="hidden" name="_subject" value="Ново запитване от сайта Симекс М">
+
+    <div class="form-group">
+        <label class="form-label">Вашето Име</label>
+        <input type="text" name="name" class="form-input" placeholder="Иван Иванов" required>
     </div>
+
+    <div class="form-group">
+        <label class="form-label">Имейл за обратна връзка</label>
+        <input type="email" name="email" class="form-input" placeholder="ivan@example.com" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Съобщение / Запитване</label>
+        <textarea name="message" class="form-input min-h-[150px]" placeholder="Опишете Вашия проект или нужди..." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-p w-full flex items-center justify-center gap-2">
+        <span>Изпрати Запитване</span>
+        <i data-lucide="send" class="w-4 h-4"></i>
+    </button>
+</form>
 
     <div class="cnt-form mech-reveal" data-delay="1" style="align-self:end">
       <div class="f-grp">
