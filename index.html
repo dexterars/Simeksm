@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Симекс М | CNC & Автоматизация</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
@@ -31,6 +32,14 @@
   --font-head:   'Rajdhani', sans-serif;
   --font-mono:   'Share Tech Mono', monospace;
   --font-body:   'Exo 2', sans-serif;
+  * {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+  }
+  
+  /* Малък бонус за още по-мек дизайн: правим ъглите на бутоните и картите по-заоблени */
+  .rounded-lg, .rounded-xl, .rounded-2xl {
+    border-radius: 1.5rem !important; /* Това прави заоблянето по-плавно */
+  }
 }
 
 /* ─── RESET ──────────────────────────────────────────────── */
