@@ -34,17 +34,56 @@
   background-size: cover;
   will-change: transform; /* Оптимизация за плавно движение */
 }
-
-/* Корекция за съдържанието, за да е над фиксирания фон */
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-/* Оправяме калкулатора да не се застъпва грозно на телефон */
+/* КОРЕКЦИЯ ЗА ТЕКСТОВЕТЕ И СТАТИСТИКИТЕ НА ТЕЛЕФОН */
 @media (max-width: 768px) {
+  /* Центрираме всичко вертикално в екрана на телефона */
   .hero-section {
-    height: 60vh; /* Малко по-ниско на телефон */
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 20px !important;
+  }
+
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* ТОВА дава голямо и чисто разстояние между заглавие, цифри и бутон */
+  }
+
+  /* Заглавието - по-малко и с разстояние */
+  .hero-content h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  /* Статистиките - една под друга с иконки/акценти */
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Разстояние между 200+ и 29г. */
+  }
+
+  .hero-stats div {
+    font-size: 1.1rem;
+    color: var(--text-2);
+  }
+
+  .hero-stats strong {
+    font-size: 2.2rem;
+    display: block; /* Цифрата да е на нов ред над текста за по-модерен вид */
+    color: var(--blue-hi);
+  }
+
+  /* Бутонът - да не е залепен */
+  .hero-content .btn {
+    padding: 18px 30px !important;
+    font-size: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
   }
 }
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
