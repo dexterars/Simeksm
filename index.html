@@ -6,6 +6,50 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+/* --- PARALLAX HERO SECTION --- */
+.hero-section {
+  position: relative;
+  height: 80vh; /* Заема 80% от екрана */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(5, 9, 14, 0.5), rgba(5, 9, 14, 0.9)), 
+                    url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=2070'); /* Снимка на металообработка */
+  background-attachment: fixed; /* ТОВА СЪЗДАВА ПАРАЛАКСА */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -50px; /* Застъпване с калкулатора */
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem) !important;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(to right, #fff, var(--blue-hi));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -2px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--text-2);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Правим калкулатора да изглежда като "панел" върху фона */
+.dashboard {
+  position: relative;
+  z-index: 10;
+  background: var(--bg);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  box-shadow: 0 -20px 40px rgba(0,0,0,0.5);
+  padding-top: 60px !important;
+}
 /* --- АВТОМАТИЧНА МОБИЛНА ВЕРСИЯ --- */
 @media (max-width: 768px) {
   /* Основният грид става на 1 колона */
@@ -648,7 +692,25 @@ body.mobile-view {
 </style>
 </head>
 <body>
+<section class="hero-section">
+    <div class="hero-content">
+        <h1>SIMEKSM</h1>
+        <p>Прецизност и иновации в металообработката. <br> Изчислете вашата производствена ефективност долу.</p>
+        <div style="margin-top: 30px;">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" style="animation: bounce 2s infinite;">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"></path>
+            </svg>
+        </div>
+    </div>
+</section>
 
+<style>
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+</style>
 <!-- ── NAV ─────────────────────────────────────────── -->
 <nav>
   <a href="#" class="nav-logo">
@@ -699,7 +761,7 @@ body.mobile-view {
   <div class="hero-stats mech-reveal" data-delay="4">
     <div class="stat"><div class="stat-val">0.001</div><div class="stat-lbl">мм точност</div></div>
     <div class="stat"><div class="stat-val">200+</div><div class="stat-lbl">реализирани машини</div></div>
-    <div class="stat"><div class="stat-val">18</div><div class="stat-lbl">години опит</div></div>
+    <div class="stat"><div class="stat-val">29</div><div class="stat-lbl">години опит</div></div>
   </div>
 </section>
 
