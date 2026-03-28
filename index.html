@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="bg" data-theme="dark">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -591,6 +592,29 @@ footer{
   .cnt-layout{grid-template-columns:1fr;gap:2.5rem}
   .cnt-form{grid-template-columns:1fr}
   footer{flex-direction:column;gap:.8rem;text-align:center}
+}
+/* Адаптивност за телефони */
+@media (max-width: 768px) {
+  .main-grid { grid-template-columns: 1fr !important; }
+  .header { flex-direction: column; text-align: center; gap: 20px; }
+  .results-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Стил за мобилния симулатор (когато цъкнеш бутона) */
+body.mobile-view {
+  max-width: 390px !important;
+  margin: 20px auto !important;
+  border: 10px solid #1e293b;
+  border-radius: 40px;
+  height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 0 50px rgba(0,0,0,0.7);
+}
+
+.mobile-btn {
+  position: fixed; bottom: 20px; right: 20px; z-index: 9999;
+  background: #1a9fff; color: white; border: none; padding: 12px 20px;
+  border-radius: 50px; font-weight: bold; cursor: pointer;
 }
 </style>
 </head>
@@ -1189,5 +1213,12 @@ window.addEventListener('scroll',()=>{
   calc(); // initial render
 })();
 </script>
+<button class="mobile-btn" onclick="document.body.classList.toggle('mobile-view')">📱 Тест Мобилен Изглед</button>
+
+<script>
+// Тази функция само добавя/маха мобилния дизайн за теста
+function toggleMobile() {
+    document.body.classList.toggle('mobile-view');
+}
 </body>
 </html>
