@@ -6,6 +6,35 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+/* --- АВТОМАТИЧНА МОБИЛНА ВЕРСИЯ --- */
+@media (max-width: 768px) {
+  /* Основният грид става на 1 колона */
+  .main-grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 15px !important;
+  }
+
+  /* Резултатите (малките кутийки) също стават една под друга */
+  .results-grid { 
+    grid-template-columns: 1fr !important; 
+    gap: 10px !important;
+  }
+
+  /* Намаляваме заглавията, за да не излизат от екрана */
+  h1 { font-size: 1.8rem !important; text-align: center; }
+  
+  /* Намаляваме вътрешните разстояния на картите */
+  .card { 
+    padding: 20px !important; 
+    border-radius: 16px !important; 
+  }
+
+  /* Оправяме хедъра да не се застъпва */
+  .header { 
+    flex-direction: column; 
+    text-align: center; 
+  }
+}
 /* ─── DESIGN TOKENS ─────────────────────────────────────── */
 :root {
   --bg:          #05090e;
